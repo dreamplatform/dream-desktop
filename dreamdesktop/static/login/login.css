@@ -1,0 +1,331 @@
+/*
+========================================================
+Reset
+========================================================
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+========================================================
+Wrappers
+========================================================
+*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF url('bg.jpg') repeat-x;
+}
+body, input {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    color: #555555;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+#loginBoxContainer {
+    position: relative;
+    height: 530px;
+    width: 450px;
+    margin: 70px auto 0 auto;
+    padding: 7px;
+    background: rgba(255,255,255,0.5);
+    z-index: 3;
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#loginBox {
+    position: relative;
+    height: 510px;
+    width: 430px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #FFFFFF;
+    z-index: 3;
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* jQuery view change init */
+
+.innerContainer {
+    display: none;
+}
+#login {
+    display: block;
+}
+
+/*
+========================================================
+Header
+========================================================
+*/
+
+.header {
+    position: relative;
+    min-height: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.header .icon {
+    height: 30px;
+    left: 0;
+    position: absolute;
+    text-indent: -999999px;
+    top: 0;
+    width: 30px;
+}
+.header .icon img {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: 0;
+}
+.header .title {
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-top: 6px;
+    position: relative;
+}
+.header .actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.header .actions a {
+    display: block;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-left: 10px;
+    background: transparent url("icon16-arrow-left-small-2.png") no-repeat left center;
+    color: #035C16;
+    text-decoration: none;
+}
+.header .actions a:hover {
+    text-decoration: none;
+}
+
+/*
+========================================================
+Content
+========================================================
+*/
+.content {}
+.content .fieldWrap {
+    width: 312px;
+    padding-bottom: 10px;
+}
+.content label.fieldTitle {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    margin-left: 5px;
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background: transparent url('bg-grey-gradient.png') repeat-x left top;
+    color: #666666;
+    cursor: pointer;
+    /* CSS3 - BORDER RADIUS */
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
+    /* CSS3 - BOX SHADOW */
+    -webkit-box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+    -moz-box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+    box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+}
+.content input.fieldContent {
+    width: 300px;
+    padding: 5px;
+    margin: 0;
+    outline: 0;
+    border: 1px solid #CCCCCC;
+    background: #FFFFFF;
+    clear: both;
+    font-size: 13px;
+    line-height: 16px;
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* Actions */
+
+.content .actions {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.content .actions input[type="submit"] {
+    display: block;
+    float: left;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 3px 14px;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #005511;
+    background: #035c16 url('bg-btn.png') repeat-x 0 -400px;
+    color: #FFFFFF;
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+.content .actions input[type="submit"]:hover {
+    border: 1px solid #005511;
+    background: #009438 url('bg-btn.png') repeat-x 0 -500px;
+    color: #FFFFFF;
+}
+a.forgotPw {
+    display: block;
+    float: left;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 4px 10px;
+    color: #999999;
+    text-decoration: none;
+}
+a.forgotPw:hover {
+    color: #035C16;
+    text-decoration: underline;
+}
+
+/* Alert boxes */
+
+.content #error {
+    display: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d8000c;
+    background: #ffbaba;
+    color: #000000;
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/*
+========================================================
+Footer
+========================================================
+*/
+
+.footer {
+    border-top: 1px solid #CCCCCC;
+    margin-top: 20px;
+    padding-top: 5px;
+    position: relative;
+}
+.footer p {
+    color: #999999;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+========================================================
+Non-semantic helper classes
+========================================================
+*/
+
+.clear {
+    clear: both;
+    font: 1px/1px sans-serif;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}

@@ -1,0 +1,642 @@
+
+/* Base typography & colors
+======================================================== */
+
+html {
+  background: #1590d6 url(/static/dreamdesktop/img/bg.jpg) no-repeat left top;
+}
+body, input, textarea, select, button {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #063145;
+}
+.mod-fontface body, .mod-fontface input, .mod-fontface textarea, .mod-fontface select, .mod-fontface button {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Headings
+-------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+.mod-fontface h1, .mod-fontface h2, .mod-fontface h3, .mod-fontface h4, .mod-fontface h5, .mod-fontface h6 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+/* Links
+-------------------------------------------------------- */
+
+a { 
+  color: #3b8dc0;
+  text-decoration: none;
+}
+a:hover {
+  color: #3b8dc0;
+  text-decoration: underline;
+}
+
+/* Misc
+-------------------------------------------------------- */
+
+b, strong {
+  font-weight: bold;
+}
+.mod-fontface b, .mod-fontface strong {
+  font-weight: 600;
+}
+i, em {
+  font-style: italic;
+}
+small {
+  font-size: 85%;
+}
+ins {
+  text-decoration: none;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+
+/* Layout
+======================================================== */
+
+/* Main wrappers
+-------------------------------------------------------- */
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  position: relative;
+}
+
+/* Dreamwidget Menu
+-------------------------------------------------------- */
+
+/* Wrappers */
+
+#dw-menu {
+  position: fixed;
+  width: 60px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9998;
+  padding-top: 125px;
+  border-right: 1px solid #0c2332;
+  background: #19415b;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.mod-rgba.mod-boxshadow #dw-menu {
+  -webkit-box-shadow: 1px 0px 3px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 0px 3px 0px rgba(0, 0, 0, 0.6);
+}
+.mod-fontface #dw-menu {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+#dw-menu-content {
+  width: 100%;
+  border-top: 1px solid #146f9d;
+  padding-top: 10px;
+  background: #19415b;
+}
+
+/* Buttons */
+
+.dw-menu-button {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px 5px 5px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.dw-menu-button-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.dw-menu-button:hover .dw-menu-button-icon {
+  background-position: 0 -50px;
+}
+.dw-menu-button.active .dw-menu-button-icon,
+.dw-menu-button:active .dw-menu-button-icon {
+  background-position: 0 -100px;
+}
+.dw-menu-button.active:hover .dw-menu-button-icon,
+.dw-menu-button:active:hover .dw-menu-button-icon {
+  background-position: 0 -150px;
+}
+
+/* Button backgrounds */
+
+.dw-menu-button.toggle-edit-mode .dw-menu-button-icon {
+  background-image: url(/static/dreamdesktop/img/button-dreamwidget-edit.png);
+}
+.dw-menu-button.toggle-add-gadgets-mode .dw-menu-button-icon {
+  background-image: url(/static/dreamdesktop/img/button-dreamwidget-add.png);
+}
+.dw-menu-button.toggle-zoom-mode .dw-menu-button-icon {
+  background-image: url(/static/dreamdesktop/img/button-dreamwidget-zoom.png);
+}
+
+/* Tooltips */
+
+.dw-menu-button-tooltip {
+  display: none;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  margin: -14px 0 0 15px;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  background: #19415B;
+  color: #bee5ff;
+  font-size: 13px;
+  font-style: italic;
+  white-space: nowrap;
+}
+.mod-fontface .dw-menu-button-tooltip {
+  font-weight: 600;
+}
+.dw-menu-button:hover .dw-menu-button-tooltip {
+  display: block;
+}
+.dw-menu-button:hover .dw-menu-button-tooltip:hover {
+  display: none;
+}
+.dw-menu-button-tooltip span {
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  margin-top: -5px;
+  border-right: 5px solid #19415B;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+/* Page
+-------------------------------------------------------- */
+
+#page {
+  position: fixed;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  left: 60px;
+  right: 0px;
+  top: 0px;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* Add gadgets panel
+-------------------------------------------------------- */
+
+#add-gadgets-panel {
+  display: none;
+  overflow: auto;
+  position: absolute;
+  left: -355px;
+  top: 0;
+  bottom: 0;
+  width: 350px;
+  height: auto;
+  padding: 10px 0;
+  z-index: 2;
+  background: #f0f0f0 url(/static/dreamdesktop/img/add-gadgets-panel-bg.png) repeat 0 0;
+}
+.mod-rgba.mod-boxshadow #add-gadgets-panel {
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Gadgets */
+
+#add-gadgets-panel .gadget {
+  position: relative;
+  margin: 5px 10px;
+  padding: 5px 45px 5px 135px;
+  cursor: pointer;
+  border: 1px solid #cdd5d5;
+  border-bottom-color: #bfc7c7;
+  background: #f5f7f7;
+}
+.mod-cssgradients #add-gadgets-panel .gadget {
+  background: -moz-linear-gradient(top,  #f5f7f7 0%, #e8eced 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f7f7), color-stop(100%,#e8eced));
+  background: -webkit-linear-gradient(top,  #f5f7f7 0%,#e8eced 100%);
+  background: -o-linear-gradient(top,  #f5f7f7 0%,#e8eced 100%);
+  background: -ms-linear-gradient(top,  #f5f7f7 0%,#e8eced 100%);
+  background: linear-gradient(to bottom,  #f5f7f7 0%,#e8eced 100%);
+}
+.mod-boxshadow #add-gadgets-panel .gadget {
+  -webkit-box-shadow: inset 0 1px 0 0 #fff;
+  box-shadow: inset 0 1px 0 0 #fff;
+}
+#add-gadgets-panel .gadget:first-child {
+  margin-top: 0;
+}
+#add-gadgets-panel .gadget:hover {
+  background: #fff;
+}
+#add-gadgets-panel .gadget .icon {
+  display: block;
+  width: 120px;
+  height: 80px;
+  margin-top: -40px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+}
+#add-gadgets-panel .gadget .icon img {
+  display: block;
+  max-width: 100%;
+}
+#add-gadgets-panel .gadget .title {
+  display: block;
+  color: #4f626a;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  height: 66px;
+  line-height: 22px;
+}
+.mod-fontface #add-gadgets-panel .gadget .title {
+  font-weight: 600;
+}
+#add-gadgets-panel .gadget .title table {
+  table-layout: fixed;
+}
+#add-gadgets-panel .gadget .title table,
+#add-gadgets-panel .gadget .title tbody {
+  height: 100%;
+  width: 100%;
+}
+#add-gadgets-panel .gadget .title td {
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+#add-gadgets-panel .gadget .description {
+  display: none;
+}
+#add-gadgets-panel .gadget .action {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 5px;
+  top: 5px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#add-gadgets-panel .gadget .action {
+  background-image: url(/static/dreamdesktop/img/icon-list-add.png);
+  background-color: #67a31e;
+}
+#add-gadgets-panel .gadget:hover .action {
+  background-color: #74b822;
+}
+#add-gadgets-panel .gadget.active .action {
+  background-image: url(/static/dreamdesktop/img/icon-list-remove.png);
+  background-color: #cb4121;
+}
+#add-gadgets-panel .gadget.active:hover .action {
+  background-color: #de4724;
+}
+#add-gadgets-panel.processing .gadget .action,
+#add-gadgets-panel.processing .gadget.active .action {
+  background-color: #c5c5c5;
+}
+#add-gadgets-panel.processing .gadget.processing .action,
+#add-gadgets-panel.processing .gadget.processing:hover .action {
+  background-image: url(/static/dreamdesktop/img/spinner.gif);
+  background-color: transparent;
+}
+
+/* Gadget tooltips */
+
+.infobox {
+  display: none;
+}
+.infobox-container {
+  position: relative;
+  width: 250px;
+  padding: 10px;
+  background: #fff;
+}
+.mod-rgba.mod-boxshadow .infobox-container {
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.infobox-title {
+  font-style: italic;
+}
+.mod-fontface .infobox-title {
+  font-weight: 600;
+}
+.infobox-service-url a {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.infobox-service-url a {
+  font-size: 13px;
+  text-decoration: none;
+}
+.infobox-service-url a:hover {
+  text-decoration: underline;
+}
+.infobox-description {
+  padding-top: 5px;
+  font-size: 13px;
+  color: #4f626a;
+}
+
+/* Grid
+-------------------------------------------------------- */
+
+#grid {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow: auto;
+  z-index: 1;
+}
+#grid-content {
+  position: relative;
+  padding: 0 150px 150px 0;
+  min-width: 100%;
+  min-height: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html.edit-mode-active #grid-content {
+  background: transparent url(/static/dreamdesktop/img/grid.png) repeat 0 0;
+}
+
+/* Grid zoom */
+
+#zoom-overlay-control {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 4000px;
+  max-height: 4000px;
+  cursor: pointer;
+  display: none;
+  z-index: 9997;
+}
+#grid.zoom-active {
+  cursor: pointer;
+}
+#grid.zoom-active #zoom-overlay-control {
+  display: block;
+}
+
+/* Placeholders */
+
+#grid .placeholder {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 5px;
+  z-index: 9;
+}
+#grid .placeholder,
+#gadgetDragPlaceholder {
+  background-color: #9cc9ea;
+}
+.mod-rgba #grid .placeholder,
+.mod-rgba #gadgetDragPlaceholder {
+  background-color: rgba(255,255,255,0.5);
+}
+
+/* Gadgets */
+
+#grid .gadget {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 5px;
+  z-index: 10;
+}
+#grid .gadget.gadget-loading {
+  /*background: url(/static/dreamdesktop/img/spinner.gif) no-repeat center center;*/
+}
+.mod-boxshadow #grid .gadget {
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.mod-boxshadow #grid .gadget.gadget-loading {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#grid .gadget iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+#grid .gadget.gadget-loading iframe {
+  display: none;
+}
+#grid .gadget .move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  cursor: move;
+  background-color: #000;
+  opacity: 0.5;
+}
+.mod-rgba #grid .gadget .move {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#grid .gadget .remove {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  z-index: 12;
+  background-color: #cb4121;
+  background-image: url(/static/dreamdesktop/img/icon-remove.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.mod-csstransitions #grid .gadget .remove {
+  -webkit-transition: all 150ms ease;
+  -moz-transition: all 150ms ease;
+  -ms-transition: all 150ms ease;
+  -o-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+#grid .gadget .remove:hover,
+.mod-rgba #grid .gadget .remove:hover  {
+  background-color: #de4724;
+}
+.mod-csstransitions #grid .gadget .remove:hover {
+  width: 36px;
+  height: 36px;
+}
+#grid .gadget .ui-resizable-handle {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 13;
+  cursor: se-resize;
+  background-color: #67a31e;
+  background-image: url(/static/dreamdesktop/img/icon-resize.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.mod-csstransitions #grid .gadget .ui-resizable-handle {
+  -webkit-transition: all 150ms ease;
+  -moz-transition: all 150ms ease;
+  -ms-transition: all 150ms ease;
+  -o-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+#grid .gadget .ui-resizable-handle:hover,
+.mod-rgba #grid .gadget .ui-resizable-handle:hover,
+#grid .gadget.ui-resizable-resizing .ui-resizable-handle,
+.mod-rgba #grid .gadget.ui-resizable-resizing .ui-resizable-handle {
+  background-color: #74b822;
+}
+.mod-csstransitions #grid .gadget .ui-resizable-handle:hover,
+.mod-csstransitions #grid .gadget.ui-resizable-resizing .ui-resizable-handle  {
+  width: 36px;
+  height: 36px;
+}
+
+/* Grid kinetic */
+
+#grid.kinetic-moving-up .gadget:after,
+#grid.kinetic-moving-down .gadget:after,
+#grid.kinetic-moving-left .gadget:after,
+#grid.kinetic-moving-right .gadget:after {
+  content: '';
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Gadget sizes */
+
+#grid .w_1 { width: 90px; }
+#grid .w_2 { width: 190px; }
+#grid .w_3 { width: 290px; }
+#grid .w_4 { width: 390px; }
+#grid .w_5 { width: 490px; }
+#grid .w_6 { width: 590px; }
+#grid .w_7 { width: 690px; }
+#grid .w_8 { width: 790px; }
+#grid .w_9 { width: 890px; }
+#grid .w_10 { width: 990px; }
+#grid .w_11 { width: 1090px; }
+#grid .w_12 { width: 1190px; }
+#grid .w_13 { width: 1290px; }
+#grid .w_14 { width: 1390px; }
+#grid .w_15 { width: 1490px; }
+#grid .w_16 { width: 1590px; }
+#grid .w_17 { width: 1690px; }
+#grid .w_18 { width: 1790px; }
+#grid .w_19 { width: 1890px; }
+#grid .w_20 { width: 1990px; }
+
+#grid .h_1 { height: 90px; }
+#grid .h_2 { height: 190px; }
+#grid .h_3 { height: 290px; }
+#grid .h_4 { height: 390px; }
+#grid .h_5 { height: 490px; }
+#grid .h_6 { height: 590px; }
+#grid .h_7 { height: 690px; }
+#grid .h_8 { height: 790px; }
+#grid .h_9 { height: 890px; }
+#grid .h_10 { height: 990px; }
+#grid .h_11 { height: 1090px; }
+#grid .h_12 { height: 1190px; }
+#grid .h_13 { height: 1290px; }
+#grid .h_14 { height: 1390px; }
+#grid .h_15 { height: 1490px; }
+#grid .h_16 { height: 1590px; }
+#grid .h_17 { height: 1690px; }
+#grid .h_18 { height: 1790px; }
+#grid .h_19 { height: 1890px; }
+#grid .h_20 { height: 1990px; }
+
+/* Footer
+-------------------------------------------------------- */
+
+#footer {
+  position: absolute;
+  overflow: hidden;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+#footer p {
+  float: right;
+  padding: 0 25px 25px 0;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #73c1ee;
+  white-space: nowrap;
+}
+.mod-rgba #footer p {
+  color: rgba(255,255,255,0.5);
+}

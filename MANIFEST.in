@@ -1,0 +1,2 @@
+recursive-include dreamdesktop/static *
+recursive-include dreamdesktop/templates *

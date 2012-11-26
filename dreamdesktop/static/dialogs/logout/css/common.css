@@ -1,0 +1,411 @@
+/*
+============================================================================
+Base
+============================================================================
+*/
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body, input, textarea {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	line-height: 1.5em;
+	color: #444444;
+}
+
+/*
+============================================================================
+Links
+============================================================================
+*/
+
+a, a:visited { 
+	color: #444444;
+	text-decoration: none;
+}
+a:hover {
+	outline: 0;
+	text-decoration: underline;
+}
+a:focus {
+	outline: 0;
+	text-decoration: none;
+}
+a:active {
+	outline: 0;
+	text-decoration: none;
+}
+
+/*
+============================================================================
+Typography
+============================================================================
+*/
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	font-size: 14px;
+}
+b, strong {
+	font-weight: bold;
+}
+ins {
+	text-decoration: none;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+/*
+============================================================================
+Lists
+============================================================================
+*/
+
+ul, ol {}
+dd {}
+
+/*
+============================================================================
+Images
+============================================================================
+*/
+
+img {
+	border: 0;
+	/* IE7 - Better scaling */
+	-ms-interpolation-mode: bicubic;
+}
+
+/*
+============================================================================
+Forms
+============================================================================
+*/
+
+form {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+label {
+	cursor: pointer;
+}
+input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+}
+input {
+	line-height: normal;
+}
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+input,
+textarea {
+	width: 300px;
+	padding: 5px;
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	outline: 0;
+}
+.borderradius input,
+.borderradius textarea {
+	/* CSS3 - BORDER RADIUS */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+label {
+	display: block;
+	padding: 10px 0 3px 0;
+}
+
+/*
+============================================================================
+Buttons
+============================================================================
+*/
+
+/* Text buttons */
+
+.btn, a.btn {
+	display: block;
+	float: right;
+	height: 22px;
+	line-height: 22px;
+	padding-left: 14px;
+	padding-right: 14px;
+	margin-left: 5px;
+	text-align: center;
+}
+.btn:hover, a.btn:hover {
+	text-decoration: none;
+}
+.borderradius .btn {
+	/* CSS3 - BORDER RADIUS */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* Green */
+
+.btn1, a.btn1, .btn.active, a.btn.active {
+	border: 1px solid #005511;
+	background: #035c16 url('img/bg-btn.png') repeat-x 0 -400px;
+	color: #FFFFFF;
+}
+.btn1:hover, a.btn1:hover, .btn.active:hover, a.btn.active:hover {
+	border: 1px solid #005511;
+	background: #046d1a url('img/bg-btn.png') repeat-x 0 -500px;
+	color: #FFFFFF;
+}
+.rgba.boxshadow .btn1, .rgba.boxshadow .btn1:hover {
+	/* CSS3 - BOX SHADOW & RGBA */
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+
+/* Dark Grey */
+
+.btn2, a.btn2 {
+	border: 1px solid #444444;
+	background: #666666 url('img/bg-btn.png') repeat-x 0 -200px;
+	color: #FFFFFF;
+}
+.btn2:hover, a.btn2:hover {
+	border: 1px solid #444444;
+	background: #777777 url('img/bg-btn.png') repeat-x 0 -300px;
+	color: #FFFFFF;
+}
+.rgba.boxshadow .btn2, .rgba.boxshadow .btn2:hover {
+	/* CSS3 - BOX SHADOW & RGBA */
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+
+/* Light Grey */
+
+.btn3, a.btn3 {
+	border: 1px solid #CCCCCC;
+	background: #E5E5E5 url('img/bg-btn.png') repeat-x 0 0px;
+	color: #666666;
+}
+.btn3:hover, a.btn3:hover {
+	border: 1px solid #BBBBBB;
+	background: #D5D5D5 url('img/bg-btn.png') repeat-x 0 -100px;
+	color: #444444;
+}
+.rgba.boxshadow .btn3 {
+	/* CSS3 - BOX SHADOW & RGBA */
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+}
+.rgba.boxshadow .btn3:hover {
+	/* CSS3 - BOX SHADOW & RGBA */
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+}
+
+/* Active state */
+
+.btn.active, a.btn.active {
+	border: 1px solid #005511;
+	background: #035c16 url('img/bg-btn.png') repeat-x 0 -400px;
+	color: #FFFFFF;
+}
+.btn.active:hover, a.btn.active:hover {
+	border: 1px solid #005511;
+	background: #046d1a url('img/bg-btn.png') repeat-x 0 -500px;
+	color: #FFFFFF;
+}
+.rgba.boxshadow .btn.active, .rgba.boxshadow .btn.active:hover {
+	/* CSS3 - BOX SHADOW & RGBA */
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+
+/*
+============================================================================
+Content - Global - Wrappers
+============================================================================
+*/
+
+.page {
+	padding: 5px;
+	background: #FFFFFF;
+}
+.borderradius .page {
+	/* CSS3 - BORDER RADIUS */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.container {
+	width: 440px;
+	height: 520px;
+	position: relative;
+	overflow: auto;
+}
+.container .logoutBox {
+	padding: 5px 10px 5px 5px;
+}
+
+/*
+============================================================================
+Content - Global - Header
+============================================================================
+*/
+
+.header {
+	position: relative;
+	min-height: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.header .title {
+	position: relative;
+	float: left;
+	display: block;
+	margin-top: 6px;
+	margin-left: 40px;
+	margin-right: 90px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.header .title:hover {
+	text-decoration: none;
+}
+.header .icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	text-indent: -999999px;
+}
+.header .icon img {
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+.header .actions {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.header .actions a {
+	display: block;
+	float: right;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 20px;
+	margin-left: 10px;
+	background: transparent url('img/icon16-arrow-left-small-2.png') no-repeat left center;
+	color: #035c16;
+}
+
+/*
+============================================================================
+Content - Global - Footer
+============================================================================
+*/
+
+.footer {
+	position: relative;
+	padding-top: 5px;
+	margin-top: 20px;
+	border-top: 1px solid #CCCCCC;
+}
+.footer p {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	color: #999999;
+}
+
+/*
+============================================================================
+Content - Content - .logoutBox
+============================================================================
+*/
+
+.logoutBox .header {
+	margin-bottom: 15px;
+}
+.logoutBox .content {
+	margin: 0 5px;
+}
+.logoutBox p {
+	margin-bottom: 10px;
+}
+.logoutBox .btn {
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+/*
+============================================================================
+Non-semantic helper classes
+============================================================================
+*/
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+.clear {
+	clear: both;
+	font: 1px/1px sans-serif;
+	height: 1px;
+	overflow: hidden;
+	visibility: hidden;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}

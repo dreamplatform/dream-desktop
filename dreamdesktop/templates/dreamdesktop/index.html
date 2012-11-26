@@ -1,0 +1,97 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>{% trans 'Desktop' %} | {% trans 'Dream School' %}</title>
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}dreamdesktop/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}dreamdesktop/css/desktop.css" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" />
+  <link rel="shortcut icon" href="{{ STATIC_URL }}dreammdesktop/img/favicon.png" />
+  <script src="{{ DREAMWIDGETURL }}" type="text/javascript"></script>
+  <script src="{{ STATIC_URL }}dreamdesktop/js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+
+<body>
+
+  <div id="dw-menu">
+    <div id="dw-menu-content">
+
+      <span class="dw-menu-button toggle-edit-mode">
+        <span class="dw-menu-button-icon"></span>
+        <span class="dw-menu-button-tooltip">{% trans "Edit gadgets (e)" %}<span></span></span>
+      </span>
+
+      <span class="dw-menu-button toggle-add-gadgets-mode">
+        <span class="dw-menu-button-icon"></span>
+        <span class="dw-menu-button-tooltip">{% trans "Add gadgets (a)" %}<span></span></span>
+      </span>
+
+      <span class="dw-menu-button toggle-zoom-mode">
+        <span class="dw-menu-button-icon"></span>
+        <span class="dw-menu-button-tooltip">{% trans "Zoom (z)" %}<span></span></span>
+      </span>
+
+    </div><!-- /#dw-menu-content -->
+  </div><!-- /#dw-menu -->
+
+  <div id="page">
+
+    <div id="add-gadgets-panel">
+      <ul class="clearfix">
+
+        {% for gadget in all_gadgets %}
+          <li class="gadget{% if gadget.1 %} active{% endif %}" data-url="{{ gadget.0.url }}" data-gadget-id="{{ gadget.0.id }}" data-name="{{ gadget.0.name }}" data-default-width="{{ gadget.0.default_width }}" data-min-width="{{ gadget.0.min_width }}" data-max-width="{{ gadget.0.max_width }}" data-default-height="{{ gadget.0.default_height }}" data-min-height="{{ gadget.0.min_height }}" data-max-height="{{ gadget.0.max_height }}">
+            <div class="icon"><img src="{% if gadget.0.icon %}{{ gadget.0.icon.url }}{% else %}{{ STATIC_URL }}dreamdesktop/img/icon-gadget-avatar.png{% endif %}" alt="" /></div>
+            <div class="title">
+              <table>
+                <tbody>
+                  <td>{{ gadget.0.name }}</td>
+                </tbody>
+              </table>
+            </div>
+            <div class="description">{% if gadget.0.description %}{{ gadget.0.description }}{% else %}{% trans 'No description available.' %}{% endif %}</div>
+            <div class="action"></div>
+            <div class="infobox">
+              <div class="infobox-container">
+                <div class="infobox-title">{{ gadget.0.name }}</div>
+                {% if gadget.0.service_url %}<div class="infobox-service-url"><a href="{{ gadget.0.service_url }}">{{ gadget.0.service_url }}</a></div>{% endif %}
+                <div class="infobox-description">{% if gadget.0.description %}{{ gadget.0.description }}{% else %}{% trans 'No description available.' %}{% endif %}</div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+
+      </ul>
+    </div><!-- /#add-gadgets-panel -->
+
+    <div id="grid" style="overflow: hidden;">
+      <div id="grid-content">
+
+        {% for gadget in gadgets %}
+        <div class="gadget w_{{ gadget.width }} h_{{ gadget.height }} noscrolldrag gadget-loading" style="left:{{ gadget.left }}px;top:{{ gadget.top }}px;" data-id="{{ gadget.id }}" data-gadget-id="{{ gadget.gadget.id }}" data-title="{{ gadget.gadget.name }}" data-description="{{ gadget.gadget.description }}" data-url="{{ gadget.gadget.url }}" data-left="{{ gadget.left }}" data-top="{{ gadget.top }}" data-width="{{ gadget.width }}" data-min-width="{{ gadget.gadget.min_width }}" data-max-width="{{ gadget.gadget.max_width }}" data-height="{{ gadget.height }}" data-min-height="{{ gadget.gadget.min_height }}" data-max-height="{{ gadget.gadget.max_height }}">
+          <iframe src="{{ gadget.gadget.url }}" frameborder="0"></iframe>
+        </div>
+        {% endfor %}
+
+        <div id="zoom-overlay-control"></div>
+      </div><!-- /#grid-container -->
+    </div><!-- /#grid -->
+
+  </div><!-- /#page -->
+
+  <div id="footer">
+    <p>{% trans '#copyright' %}</p>
+  </div><!-- /#footer -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write("<script src='{{ STATIC_URL }}dreamdesktop/js/libs/jquery-1.7.2.min.js'>\x3C/script>")</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+  <script>window.jQuery.ui || document.write("<script src='{{ STATIC_URL }}dreamdesktop/js/libs/jquery-ui-1.8.21.min.js'>\x3C/script>")</script>
+  <script src="{{ STATIC_URL }}dreamdesktop/js/libs/jquery.kinetic-1.5.js"></script>
+  <script src="{{ STATIC_URL }}dreamdesktop/js/libs/jquery.zoomooz-1.0.4.min.js"></script>
+  <script src="{{ STATIC_URL }}dreamdesktop/js/desktop.js"></script>
+
+</body>
+</html>

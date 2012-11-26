@@ -1,0 +1,289 @@
+/*
+========================================================
+Reset
+========================================================
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+========================================================
+Base
+========================================================
+*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    height: 100%;
+}
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    background: #FFFFFF;
+    color: #000000;
+    height: 100%;
+}
+a, a:visited { 
+    color: #000000;
+    text-decoration: none;
+}
+a:hover {
+    outline: 0;
+    text-decoration: underline;
+}
+a:focus, a:active {
+    outline: 0;
+}
+form {
+    margin: 0;
+}
+label {
+    cursor: pointer;
+}
+input {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    background: #FFFFFF;
+    color: #000000;
+    border: 0;
+    outline: 0;
+}
+input:focus {
+    border: 0;
+    outline: 0;
+}
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+========================================================
+Content - Wrappers
+========================================================
+*/
+
+#page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 600px;
+}
+#leftCol {
+    position: relative;
+    float: left;
+    width: 35%;
+    height: 100%;
+}
+#rightCol {
+    position: relative;
+    float: right;
+    width: 65%;
+    height: 100%;
+}
+#leftColWrap {
+    border-right: 1px solid #CCCCCC;
+    height: 100%;
+}
+#rightColWrap {
+    height: 100%;
+}
+
+/*
+========================================================
+Content - Login
+========================================================
+*/
+
+#login {
+    width: 190px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -75px 0 0 -95px;
+}
+#login img {
+    display: block;
+    width: 146px;
+    height: 104px;
+    margin: 0 auto;
+}
+#login a.button {
+    display: block;
+    width: 168px;
+    padding: 5px 10px;
+    margin: 16px auto 0 auto;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px solid #005511;
+    background: #018433;
+    color: #FFFFFF;
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    /* CSS3 - BOX SHADOW */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+#login a.button:hover,
+#login a.button:active {
+    text-decoration: none;
+    background-color: #009438;
+}
+
+/*
+========================================================
+Content - Search
+========================================================
+*/
+
+#search {
+    width: 370px;
+    height: 76px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -38px 0 0 -185px;
+}
+#search .field {
+    display: block;
+}
+#search .field input[type="text"] {
+    width: 358px;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid #CCCCCC;
+    background: #FFFFFF;
+}
+#search .field input[type="text"]:hover{
+    border: 1px solid #BBBBBB;
+}
+#search .field input[type="text"]:focus {
+    border: 1px solid #4D90FE;
+}
+#search .button {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+}
+#search .button input[type="submit"] {
+    width: 120px;
+    padding: 8px 0;
+    margin: 10px 0 0 0;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    background-color: #F5F5F5;
+    color: #666666;
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+#search .button input[type="submit"]:hover {
+    border: 1px solid #C6C6C6;
+    background-color: #F8F8F8;
+    color: #666666;
+    /* CSS3 - BOX SHADOW */
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+#search .button input[type="submit"]:focus {
+    border: 1px solid #4D90FE;
+    background-color: #F8F8F8;
+    color: #666666;
+   /* CSS3 - BOX SHADOW */
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*
+========================================================
+Non-semantic helper classes
+========================================================
+*/
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+.clear {
+    clear: both;
+    font: 1px/1px sans-serif;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}

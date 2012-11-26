@@ -1,0 +1,11 @@
+
+#encoding=utf-8
+
+from django.conf import settings as SETTINGS
+
+def settings(context):
+    return  {'DREAMDESKTOP_MSG_DOMAIN' : SETTINGS.DREAMDESKTOP_MSG_DOMAIN,
+             'DREAMDESKTOP_DOMAIN' : SETTINGS.DREAMDESKTOP_DOMAIN,
+             'DREAMWIDGETURL' : SETTINGS.DREAMDESKTOP_DREAMWIDGET_URL,
+             'DREAMDESKTOP_USERDB_DOMAIN' : getattr(SETTINGS,'DREAMDESKTOP_USERDB_DOMAIN', ''),
+            }

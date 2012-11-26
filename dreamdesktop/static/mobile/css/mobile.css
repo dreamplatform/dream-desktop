@@ -1,0 +1,128 @@
+/*
+========================================================
+Reset
+========================================================
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+========================================================
+Base
+========================================================
+*/
+
+html, body {}
+body {}
+html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body, input { font-family: Helvetica,Arial,sans-serif; font-size: 13px; line-height: 1.5em; background: #FFFFFF; color: #000000; }
+a, a:visited { color: #000000; text-decoration: none; }
+a:hover { outline: 0; text-decoration: underline; }
+a:focus, a:active { outline: 0; }
+form { margin: 0; }
+input { border: 0; outline: 0; }
+input:focus { border: 0; outline: 0; }
+input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input::-moz-focus-inner { border: 0; padding: 0; }
+
+/*
+========================================================
+Content - Wrappers
+========================================================
+*/
+
+/* Sized for minimum 320px width */
+.content { width: 260px; padding: 0 30px; margin: 0 auto; }
+
+/*
+========================================================
+Content - Login
+========================================================
+*/
+
+#login { padding: 20px 0; }
+
+  #login img { display: block; width: 146px; height: 104px; margin: 0 auto 15px auto; }
+  #login a.button, #login form .button input { display: block; padding: 15px; text-align: center; text-decoration: none; font-weight: bold; font-size: 16px; line-height: 18px; border: 1px solid #005511; background: #018433; color: #FFFFFF; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4); -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4); box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4); }
+  #login a.button:hover, #login a.button:active, #login a.button:focus { -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3); -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3); box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5); }
+
+  /* Login fields */
+  #login form {}
+    #login form .field { padding-bottom: 10px; }
+      #login .field input { display: block; width: 238px; margin: 0 auto; padding: 10px; font-size: 14px; line-height: 20px; border: 1px solid #CCCCCC; background: #FFFFFF; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+      #login .field input::-webkit-input-placeholder { color: #999999; font-style: italic; }
+      #login .field input:-moz-placeholder { color: #999999; font-style: italic; }
+      #login .field input:focus { border: 1px solid #018433; }
+    #login form .button {}
+      #login form .button input { display: block; width: 260px; padding: 15px 0; margin: 0; }
+      #login form .button input:focus, #login form .button input:active { -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3); -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3); box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5); }
+
+/*
+========================================================
+Content - Search
+========================================================
+*/
+
+#search { padding: 20px 0; border-top: 1px dashed #E9E9E9; }
+  #search form { display: block; }
+    #search .field { display: block; position: relative; }
+      #search .field input { display: block; width: 248px; margin: 0 auto; padding: 5px; font-size: 14px; line-height: 20px; border: 1px solid #CCCCCC; background: #FFFFFF; }
+      #search .field input:focus { border: 1px solid #4D90FE; }
+    #search .button { display: block; width: 120px; margin: 0 auto; }
+      #search .button input { width: 120px; padding: 8px 0; margin: 10px 0 0 0; font-size: 11px; line-height: 1; font-weight: bold; text-align: center; border: 1px solid #CCCCCC; background-color: #F5F5F5; color: #666666; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+      #search .button input:focus, #search .button input:active { border: 1px solid #4D90FE; background-color: #F8F8F8; color: #666666; -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1); box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1); }
+
+/*
+========================================================
+Non-semantic helper classes
+========================================================
+*/
+
+.clearfix:before, .clearfix:after {content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

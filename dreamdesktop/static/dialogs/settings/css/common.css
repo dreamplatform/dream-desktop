@@ -1,0 +1,1504 @@
+/*
+============================================================================
+Base
+============================================================================
+*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body, input, textarea {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    color: #444444;
+}
+
+/*
+============================================================================
+Links
+============================================================================
+*/
+
+a, a:visited { 
+    color: #444444;
+    text-decoration: none;
+}
+a:hover {
+    outline: 0;
+    text-decoration: underline;
+}
+a:focus {
+    outline: 0;
+    text-decoration: none;
+}
+a:active {
+    outline: 0;
+    text-decoration: none;
+}
+
+/*
+============================================================================
+Typography
+============================================================================
+*/
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    font-size: 14px;
+}
+b, strong {
+    font-weight: bold;
+}
+ins {
+    text-decoration: none;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+/*
+============================================================================
+Lists
+============================================================================
+*/
+
+ul, ol {}
+dd {}
+
+/*
+============================================================================
+Images
+============================================================================
+*/
+
+img {
+    border: 0;
+    /* IE7 - Better scaling */
+    -ms-interpolation-mode: bicubic;
+}
+
+/*
+============================================================================
+Forms
+============================================================================
+*/
+
+form {
+    margin: 0;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+label {
+    cursor: pointer;
+}
+input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+input {
+    line-height: normal;
+}
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+}
+input[type="search"] {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+input,
+textarea {
+    width: 300px;
+    padding: 5px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    outline: 0;
+}
+.borderradius input,
+.borderradius textarea {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+input.masked,
+textarea.masked {}
+input.masked:focus,
+textarea.masked:focus {
+    border: 1px solid #035C16;
+}
+input.masked:hover,
+textarea.masked:hover {
+    border: 1px solid #CCCCCC;
+    background: #F9F9F9;
+}
+label {
+    display: block;
+}
+/*
+============================================================================
+Tabs
+============================================================================
+*/
+
+.tabCont {
+    display: none;
+}
+.tabCont.active {
+    display: block;
+}
+
+/*
+============================================================================
+iFrame Dialogs
+============================================================================
+*/
+
+.sd {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9000;
+}
+.sdOverlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+.sdContent {
+    position: absolute;
+    top: 30px;
+}
+.confirmationBox {
+    padding: 10px;
+    background: #FFFFFF;
+}
+.borderradius .confirmationBox {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.confirmationBox .info {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.confirmationBox .actions a.btn {
+    float: left;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+/*
+============================================================================
+Buttons
+============================================================================
+*/
+
+/* Text buttons */
+
+.btn, a.btn {
+    display: block;
+    float: right;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-left: 5px;
+    text-align: center;
+}
+.btn:hover, a.btn:hover {
+    text-decoration: none;
+}
+.borderradius .btn {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* Green */
+
+.btn1, a.btn1, .btn.active, a.btn.active {
+    border: 1px solid #005511;
+    background: #035c16 url('img/bg-btn.png') repeat-x 0 -400px;
+    color: #FFFFFF;
+}
+.btn1:hover, a.btn1:hover, .btn.active:hover, a.btn.active:hover {
+    border: 1px solid #005511;
+    background: #046d1a url('img/bg-btn.png') repeat-x 0 -500px;
+    color: #FFFFFF;
+}
+.rgba.boxshadow .btn1, .rgba.boxshadow .btn1:hover {
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+
+/* Dark Grey */
+
+.btn2, a.btn2 {
+    border: 1px solid #444444;
+    background: #666666 url('img/bg-btn.png') repeat-x 0 -200px;
+    color: #FFFFFF;
+}
+.btn2:hover, a.btn2:hover {
+    border: 1px solid #444444;
+    background: #777777 url('img/bg-btn.png') repeat-x 0 -300px;
+    color: #FFFFFF;
+}
+.rgba.boxshadow .btn2, .rgba.boxshadow .btn2:hover {
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+
+/* Light Grey */
+
+.btn3, a.btn3 {
+    border: 1px solid #CCCCCC;
+    background: #E5E5E5 url('img/bg-btn.png') repeat-x 0 0px;
+    color: #666666;
+}
+.btn3:hover, a.btn3:hover {
+    border: 1px solid #BBBBBB;
+    background: #D5D5D5 url('img/bg-btn.png') repeat-x 0 -100px;
+    color: #444444;
+}
+.rgba.boxshadow .btn3 {
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+}
+.rgba.boxshadow .btn3:hover {
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+}
+
+/* Active state */
+
+.btn.active, a.btn.active {
+    border: 1px solid #005511;
+    background: #035c16 url('img/bg-btn.png') repeat-x 0 -400px;
+    color: #FFFFFF;
+}
+.btn.active:hover, a.btn.active:hover {
+    border: 1px solid #005511;
+    background: #046d1a url('img/bg-btn.png') repeat-x 0 -500px;
+    color: #FFFFFF;
+}
+.rgba.boxshadow .btn.active, .rgba.boxshadow .btn.active:hover {
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+
+/*
+============================================================================
+Content - Global - Wrappers
+============================================================================
+*/
+
+.page {
+    padding: 5px;
+    background: #FFFFFF;
+}
+.borderradius .page {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.container {
+    width: 440px;
+    height: 520px;
+    position: relative;
+    overflow: auto;
+}
+.container .contentBox {
+    display: none;
+    padding: 5px 10px 5px 5px;
+}
+.container #userProfile {
+    display: block;
+}
+
+/*
+============================================================================
+Content - Global - Header
+============================================================================
+*/
+
+.header {
+    position: relative;
+    min-height: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.header .title {
+    position: relative;
+    float: left;
+    display: block;
+    margin-top: 6px;
+    margin-left: 40px;
+    margin-right: 90px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.header .title:hover {
+    text-decoration: none;
+}
+.header .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    text-indent: -999999px;
+}
+.header .icon img {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.header .actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.header .actions a {
+    display: block;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-left: 10px;
+    background: transparent url('img/icon16-arrow-left-small-2.png') no-repeat left center;
+    color: #035c16;
+}
+
+/*
+============================================================================
+Content - Global - Footer
+============================================================================
+*/
+
+.footer {
+    position: relative;
+    padding-top: 5px;
+    margin-top: 20px;
+    border-top: 1px solid #CCCCCC;
+}
+.footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    color: #999999;
+}
+
+/*
+============================================================================
+Content - Global - Search
+============================================================================
+*/
+
+.search {
+    padding: 10px 0;
+}
+.search input {
+    width: 300px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px 0 28px;
+    border: 1px solid #CCCCCC;
+    font-size: 12px;
+    background: white url('img/icon16-magnifying-glass.png') no-repeat 6px center;
+    color: #666666;
+}
+
+/*
+============================================================================
+Content - Global - Fields
+============================================================================
+*/
+
+.fieldWrap {
+    padding-bottom: 10px;
+}
+.fieldTitle {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    margin-left: 5px;
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background: transparent url('img/bg-grey-gradient.png') repeat-x left top;
+    color: #666666;
+}
+.fieldTitle img {
+	float: left;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 3px 5px 3px 0;
+}
+.fieldTitle .text {
+	float: left;
+    display: block;
+    color: #666666;
+    text-indent: 0;
+}
+.borderradius .fieldTitle,
+.borderradius .fieldActions a {
+    /* CSS3 - BORDER RADIUS */
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
+}
+.boxshadow .fieldTitle,
+.borderradius .fieldActions a {
+    /* CSS3 - BOX SHADOW */
+    -webkit-box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+    -moz-box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+    box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+}
+.fieldActions {
+    float: left;
+}
+.fieldActions a {
+    display: block;
+    float: left;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+    margin-left: 5px;
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: 1;
+    background: transparent url('img/bg-grad-grey-1.png') repeat-x left top;
+}
+.fieldActions a span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 3px;
+}
+.fieldActions a.edit span {
+    background: transparent url('img/icon16-cog.png') no-repeat;
+}
+.fieldActions a.add span {
+    background: transparent url('img/icon16-plus.png') no-repeat;
+}
+.fieldContent {
+    clear: both;
+}
+.fieldContent input,
+.fieldContent textarea {
+    width: 400px;
+}
+.fieldList {
+    list-style: none;
+    clear: both;
+    padding: 5px 5px 2px 5px;
+    border: 1px solid #CCCCCC;
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.fieldListItem {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+.fieldListItem .icon {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.fieldListItem .remove {
+    cursor: pointer;
+    display: none;
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background: #000000;
+    opacity: 0.8;
+}
+.fieldListItem:hover .remove {
+    display: block;
+}
+.borderradius .fieldListItem .remove {
+    /* CSS3 - BORDER RADIUS */
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 3px;
+    -webkit-border-radius: 0px 0px 0px 3px;
+    border-radius: 0px 0px 0px 3px;
+}
+.fieldListItem .remove .removeIcon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 3px;
+    background: transparent url('img/icon16-remove.png') no-repeat;
+}
+.fieldListItem img {
+    width: 50px;
+    height: 50px;
+}
+
+/*
+============================================================================
+Content - Global - selectList
+============================================================================
+*/
+
+.selectList {
+    display: block;
+    list-style: none;
+}
+.selectList li {
+    display: block;
+}
+.selectList a {
+    display: block;
+    position: relative;
+    padding: 5px;
+    border-bottom: 1px solid #CCCCCC;
+    color: #444444;
+}
+.selectList a:hover {
+    text-decoration: none;
+    background: #E9E9E9;
+}
+.selectList.withIcons a {
+    padding-left: 40px;
+}
+.selectList.withIcons a .text {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+}
+.selectList.withIcons a .icon {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -12px;
+    height: 24px;
+    width: 24px;
+    text-indent: -99999px;
+}
+.selectList.withIcons a .icon.add {
+    background: transparent url('img/icon16-plus-ball.png') no-repeat center center;
+}
+.selectList.withIcons a .icon img {
+    display: block;
+    height: 24px;
+    width: 24px;
+}
+.selectList a.active {
+    border: 1px solid #e7ddb4;
+    background: #fff9d6;
+    color: #444444;
+}
+
+/*
+============================================================================
+Content - Global - Search list
+============================================================================
+*/
+
+/* Search list - default view */
+
+.searchList {
+    display: block;
+    list-style: none;
+}
+.searchList li {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 5px 5px 5px 40px;
+    border-bottom: 1px solid #CCCCCC;
+    color: #444444;
+}
+.searchList li:first-child {
+    border-top: 1px solid #CCCCCC;
+}
+.searchList li:hover {
+    text-decoration: none;
+    background: #E9E9E9;
+}
+.searchList li .text {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+}
+.searchList li .icon {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -12px;
+    height: 24px;
+    width: 24px;
+    text-indent: -99999px;
+    background: #000000;
+}
+.searchList li .icon img {
+    display: block;
+    height: 24px;
+    width: 24px;
+}
+.searchList li.active {
+    background: #FFFFCC;
+    color: #444444;
+}
+
+/* Search list - selected items wrapper */
+
+.searchListSelected {}
+
+/* Search list - counter bar */
+
+.selectedCounter {
+    display: block;
+    position: relative;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 0;
+    border: 1px solid #CCCCCC;
+    color: #068521;
+}
+.borderradius .selectedCounter {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.selectedCounter span,
+.selectedCounter a {
+    float: left;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    font-weight: bold;
+}
+.selectedCounter .indicatorArrow {
+    width: 35px;
+    border-right: 1px solid #CCCCCC;
+    background: transparent url('img/icon16-arrow-right.png') no-repeat 4px center;
+}
+.selectedCounter .userCount,
+.selectedCounter .groupCount,
+.selectedCounter .roleCount,
+.selectedCounter .orgCount {
+    border-right: 1px solid #CCCCCC;
+    padding: 0 10px 0 31px;
+}
+.selectedCounter .groupCount {
+    background: transparent url('img/icon16-group.png') no-repeat 10px center;
+}
+.selectedCounter .userCount {
+    background: transparent url('img/icon16-user.png') no-repeat 10px center;
+}
+.selectedCounter .roleCount {
+    background: transparent url('img/icon16-role.png') no-repeat 10px center;
+}
+.selectedCounter .orgCount {
+    background: transparent url('img/icon16-org.png') no-repeat 10px center;
+}
+.selectedCounter .openEditList {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 2px 0;
+    float: right;
+    background: transparent url('img/icon16-arrow-down-ball.png') no-repeat center center;
+}
+
+/* Search list - selected items list */
+
+.selectedEdit {
+    display: none;
+    list-style: none;
+}
+.selectedEdit li {
+    display: block;
+    position: relative;
+    padding: 5px 40px 5px 40px;
+    border-bottom: 1px solid #CCCCCC;
+    background: #FFFFCC;
+    color: #444444;
+}
+.selectedEdit li:first-child {
+    border-top: 1px solid #CCCCCC;
+}
+.selectedEdit li:hover {
+    text-decoration: none;
+}
+.selectedEdit li .text {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+}
+.selectedEdit li .icon {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -12px;
+    height: 24px;
+    width: 24px;
+    text-indent: -99999px;
+    background: #000000;
+}
+.selectedEdit li .icon img {
+    display: block;
+    height: 24px;
+    width: 24px;
+}
+.selectedEdit li .remove {
+    display: block;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    cursor: pointer;
+    text-indent: -99999px;
+    background: transparent url('img/icon16-remove-ball.png') no-repeat;
+}
+
+/*
+============================================================================
+Content - Global - Add/Remove List
+============================================================================
+*/
+
+.addremList {
+    list-style: none;
+}
+.addremList .item {
+    display: block;
+    position: relative;
+    min-height: 30px;
+    height: auto !important;
+    height: 30px;
+    padding: 5px 40px 5px 40px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.addremList .item:first-child {
+    border-top: 1px solid #CCCCCC;
+}
+.addremList .item:hover {
+    background: #F9F9F9;
+}
+.addremList .text {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin: 6px 0;
+    font-size: 13px;
+    line-height: 18px;
+}
+.addremList .icon {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -15px;
+    height: 30px;
+    width: 30px;
+    text-indent: -99999px;
+}
+.addremList .icon img {
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+.addremList .action {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+    height: 30px;
+    width: 30px;
+    text-indent: -99999px;
+}
+.addremList .action.add {
+    background: transparent url('img/icon16-plus-inactive.png') no-repeat center center;
+}
+.addremList .action:hover {
+    background: transparent url('img/icon16-plus.png') no-repeat center center;
+}
+.addremList .action.remove {
+    background: transparent url('img/icon16-minus-inactive.png') no-repeat center center;
+}
+.addremList .action.remove:hover {
+    background: transparent url('img/icon16-minus.png') no-repeat center center;
+}
+
+/*
+============================================================================
+Content - Global - Tags
+============================================================================
+*/
+
+.tag, a.tag {
+    display: block;
+    float: left;
+    height: 20px;
+    padding: 2px;
+    margin: 0 5px 5px 0;
+    font-size: 11px;
+    line-height: 1;
+    border: 1px solid #CCCCCC;
+    background: #E5E5E5 url('img/bg-tag.png') repeat-x;
+    color: #666666;
+}
+.borderradius .tag {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.rgba.boxshadow .tag {
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+}
+.tag img {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+.tag .text {
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+}
+.tag:hover {
+    text-decoration: none;
+    border: 1px solid #BBBBBB;
+    background: #D5D5D5 url('img/bg-tag.png') repeat-x 0 -100px;
+    color: #444444;
+}
+.rgba.boxshadow .tag:hover {
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.7);
+}
+.tag.active {
+    border: 1px solid #005511;
+    background: #035c16 url('img/bg-tag.png') repeat-x 0 -200px;
+    color: #FFFFFF;
+}
+.tag.active:hover {
+    background: #046d1a url('img/bg-tag.png') repeat-x 0 -300px;
+}
+.rgba.boxshadow .tag.active {
+    /* CSS3 - BOX SHADOW & RGBA */
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+
+/*
+============================================================================
+Content - Global - Filter Box
+============================================================================
+*/
+
+/* Filter navigation */
+
+.filterBox {
+    border: 1px solid #CCCCCC;
+}
+.borderradius .filterBox {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.filterNav {
+    font-size: 12px;
+    background: transparent url('img/bg-grey-gradient.png') repeat-x;
+}
+.borderradius .filterNav {
+    /* CSS3 - BORDER RADIUS */
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 2px 2px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
+}
+.boxshadow .filterNav {
+    /* CSS3 - BOX SHADOW */
+    -webkit-box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+    -moz-box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+    box-shadow: inset 0px 1px 0px 0px #FFFFFF;
+}
+.filter {
+    display: block;
+    position: relative;
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    padding: 5px 10px 5px 31px;
+    border-right: 1px solid #CCCCCC;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+.filter.filtersOrg,
+.filter.filtersOrg2 {
+    background-image: url('img/icon16-org.png');
+}
+.filter.filtersType {
+    background-image: url('img/icon16-msg-type.png');
+}
+.filter.filtersTag {
+    background-image: url('img/icon16-tag.png');
+}
+.filter.filtersRole {
+    background-image: url('img/icon16-role.png');
+}
+.filter.filtersGroup {
+    background-image: url('img/icon16-group.png');
+}
+.filter:hover,
+.filter.active {
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+.filter .indicator {
+    display: none;
+}
+.filter .indicator.active {
+    display: inline;
+}
+
+/* Filter container */
+
+.filterContainer {
+    display: none;
+    padding: 7px 5px 2px 5px;
+    border-top: 1px solid #CCCCCC;
+}
+
+/*
+============================================================================
+Content - Global - Action Bars
+============================================================================
+*/
+
+.actions.bottom {
+    margin-top: 10px;
+}
+
+/*
+============================================================================
+Content - Global - Alert Boxes
+============================================================================
+*/
+
+.alertSuccess,
+.alertError {
+    display: none;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.borderradius .alertSuccess,
+.borderradius .alertError {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.alertSuccess {
+    border: 1px solid #4f8a10;
+    background: #dff2bf;
+    color: #336600;
+}
+.alertError {
+    border: 1px solid #d8000c;
+    background: #ffbaba;
+    color: #990000;
+}
+
+/*
+============================================================================
+Content - Global - Profile Wrappers
+============================================================================
+*/
+
+.profileCont {
+    position: relative;
+}
+.profileWrapLeft {
+    position: relative;
+    float: left;
+    width: 130px;
+}
+.profileWrapRight {
+    float: right;
+    width: 100%;
+    margin-left: -150px;
+}
+.profileWrapRightCont {
+    position: relative;
+    margin-left: 150px;
+}
+
+/*
+============================================================================
+Content - #userProfile
+============================================================================
+*/
+
+#userProfile {}
+#userProfile .header {
+    margin-bottom: 15px;
+}
+
+/* Tabs */
+
+#userProfile .tabs {
+    margin-top: 1px;
+}
+#userProfile .tab {
+    position: relative;
+    display: block;
+    padding: 7px 5px 7px 28px;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+#userProfile .tab.userInfo {
+    background-image: url('img/icon16-user.png');
+}
+#userProfile .tab.userOrgs {
+    background-image: url('img/icon16-org.png');
+}
+#userProfile .tab.userRoles {
+    background-image: url('img/icon16-role.png');
+}
+#userProfile .tab.userGroups {
+    background-image: url('img/icon16-group.png');
+}
+#userProfile .tab:hover {
+    text-decoration: none;
+    background-color: #F9F9F9;
+}
+#userProfile .tab.active {
+    background-color: #F9F9F9;
+    font-weight: bold;
+}
+#userProfile .tabCont {}
+
+/* Left wrap content */
+
+#userProfile .userAvatar {
+    display: block;
+    width: 122px;
+    height: 122px;
+    padding: 2px;
+    border: 2px solid #035C16;
+}
+.borderradius #userProfile .userAvatar {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#userProfile .userAvatar img {
+    display: block;
+    width: 122px;
+    height: 122px;
+}
+#userProfile .userAvatar .changeUserAvatar {
+    display: none;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 22px;
+    height: 22px;
+    background: #FFFFFF;
+}
+.borderradius #userProfile .userAvatar .changeUserAvatar {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#userProfile .userAvatar .changeUserAvatar span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 3px;
+    background: transparent url('img/icon16-cog.png') no-repeat;
+}
+#userProfile .userAvatar:hover .changeUserAvatar {
+    display: block;
+}
+
+/* Right wrap content */
+
+#userProfile #userInfo .userInfoCont {
+    width: 252px;
+}
+#userProfile #userInfo input,
+#userProfile #userInfo textarea,
+#userProfile #userInfo .fieldList,
+#userProfile #userInfo p {
+    width: 240px;
+}
+.editPwLink {
+    display: block;
+    margin-bottom: 10px;
+}
+.editPwLink a {
+    color: #035c16;
+}
+#userProfile #userInfo .userLoginMethods {
+    width: 252px;
+    padding: 5px 0;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 10px;
+}
+#userProfile #userInfo .userLoginMethods .icon {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+#userProfile #userInfo .userLoginMethods .icon img {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.userNetworks .fieldListItem,
+.userNetworks .fieldListItem .icon,
+.userNetworks img {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+#userProfile #userInfo .actions {}
+
+/* Tab views */
+
+#userProfile .actionBox {
+    margin-bottom: 10px;
+}
+#userProfile .actionBox .search {
+    float: left;
+    padding: 0;
+}
+#userProfile .actionBox .search input {
+    width: 80px;
+}
+#userProfile .actionBox .action {
+    float: left;
+    margin-left: 5px;
+}
+#userProfile .actionBox .action.btn1 {
+    padding: 0 9px;
+}
+#userProfile .filterBox {
+    margin-bottom: 10px;
+}
+#userProfile .addremList .item {
+    padding-right: 10px;
+}
+
+/*
+---------------------------------------------------------
+Special styling if 2 icons are needed for addremList
+---------------------------------------------------------
+#userRoles .addremList .item,
+#userGroups .addremList .item {
+    padding: 5px 40px 5px 75px;
+}
+#userRoles .addremList .icon2,
+#userGroups .addremList .icon2 {
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    margin-top: -15px;
+    height: 30px;
+    width: 30px;
+    text-indent: -99999px;
+}
+#userRoles .addremList .icon2 img,
+#userGroups .addremList .icon2 img {
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+*/
+
+/*
+============================================================================
+Content - #editAvatar
+============================================================================
+*/
+
+#editAvatar {}
+#editAvatar .changeAvatar {
+    position: relative;
+    margin-top: 15px;
+}
+#editAvatar .changeAvatar .image {
+    float: left;
+    height: 92px;
+    width: 92px;
+    padding: 2px;
+    border: 2px solid #035C16;
+}
+.borderradius #editAvatar .changeAvatar .image {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#editAvatar .changeAvatar .image img {
+    display: block;
+    height: 92px;
+    width: 92px;
+}
+#editAvatar .changeAvatar .info {
+    float: right;
+    width: 100%;
+    margin-left: -120px;
+}
+#editAvatar .changeAvatar .infoCont {
+    margin-left: 120px;
+}
+#editAvatar .changeAvatar .info p {
+    padding-bottom: 10px;
+}
+#editAvatar .changeAvatar .info input {
+    width: 240px;
+}
+#editAvatar .changeAvatar .info .actions {
+    float: left;
+    margin: 10px 0;
+}
+#editAvatar .changeAvatar .info .actions .btn {
+    float: left;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+/*
+============================================================================
+Content - #editPw
+============================================================================
+*/
+
+#editPw .content,
+#addGroup .content,
+#addOrg .content,
+#addRole .content {
+    width: 412px;
+    padding-top: 15px;
+}
+#editPw input,
+#addGroup input,
+#addOrg input,
+#addRole input {
+    width: 400px;
+}
+
+/*
+========================================================
+Tooltips
+========================================================
+*/
+
+.tooltip {
+    display: none;
+    float: none;
+    position: relative;
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    padding: 3px 5px;
+    margin: 0;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.5em;
+    background-color: #000000;
+    color: #EEEEEE;
+}
+.borderradius .tooltip {
+    /* CSS3 - BORDER RADIUS */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.tooltip:after {
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 4px solid transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    border-top-color: #000000;
+}
+.tooltip.bottom:after {
+    top: -8px;
+    left: 50%;
+    margin-left: -4px;
+    border-top-color: transparent;
+    border-bottom-color: #000000;
+}
+
+/* Message icon tooltip */
+
+.msgIconTT:after {
+    top: -8px;
+    left: 0;
+    margin-left: 8px;
+    border-top-color: transparent;
+    border-bottom-color: #000000;
+}
+
+/* Right tooltip - 30px width */
+
+.rightTT30Wrap:after {
+    left: 100%;
+    margin-left: -19px;
+}
+
+/* Right tooltip - 38px width */
+
+.rightTT38Wrap:after {
+    left: 100%;
+    margin-left: -23px;
+}
+
+/* Dynamic tooltip - 30px width */
+
+.dynamicTT30Wrap.right:after {
+    left: 0;
+    margin-left: 11px;
+}
+.dynamicTT30Wrap.left:after {
+    left: 100%;
+    margin-left: -11px;
+}
+
+/* Dynamic tooltip - 38px width */
+
+.dynamicTT38Wrap.right:after {
+    left: 0;
+    margin-left: 15px;
+}
+.dynamicTT38Wrap.left:after {
+    left: 100%;
+    margin-left: -15px;
+}
+
+/*
+============================================================================
+Non-semantic helper classes
+============================================================================
+*/
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+.clear {
+    clear: both;
+    font: 1px/1px sans-serif;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
